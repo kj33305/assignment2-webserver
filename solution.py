@@ -16,12 +16,12 @@ def webServer(port=13331):
     #Establish the connection
     #print('Ready to serve...')
     connectionSocket, addr = serverSocket.accept()#Fill in start      #Fill in end
-    print('accept mode')
+    #print('accept mode')
     try:
-      print('trying')
+      #print('trying')
       try:
         message = connectionSocket.recv(1024).decode()#Fill in start    #Fill in end s
-        print(message)
+        #print(message)
         filename = message.split()[1]
         f = open(filename[1:])
         outputdata = f.upper()#Fill in start     #Fill in end
@@ -44,7 +44,7 @@ def webServer(port=13331):
         #Fill in start
         errormsg = '404 Not Found'
         connectionSocket.send(errormsg.encode())
-        print(errormsg)
+        #print(errormsg)
         #Fill in end
 
 
